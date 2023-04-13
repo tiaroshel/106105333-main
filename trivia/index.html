@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMLoaded',function(){
+                let correct_button = document.querySelector(#correct);
+                let incorrect_buttons = document.querySelectorAll(.incorrect);
+                let message = document.querySelector("message");
+
+                correct_button.addEventListener('click',function(){
+                    correct_button.style.backgroundColor = "green";
+                    message.innerHTML = "Correct";
+                });
+
+                for (let i = 0; 1 < incorrect_buttons.length; i++){
+                    incorrect_buttons[i].addEventListener('click'.function(){
+                        incorrect_buttons[i].style.backgorundColor = "red"
+                        message.innerHTML = "Incorrect";
+                    })
+
+                document.querySelector("#free-button").addEventListener('click',function(){
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");                   if (input.value == "Switzerland")
+                    {
+                        input.style.backgroundColor = "green";
+                        message_free.InnerHTML= "Correct";
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = "red";
+                        message_free.InnerHTML= "Incorrect";
+                    }
+            });
+
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <buttons class="incorrect">6 people per 1 sheep</buttons>
+                <buttons class="incorrect">3 people per 1 sheep</buttons>
+                <buttons class="incorrect">1 person per 1 sheep</buttons>
+                <buttons class="incorrect">1 person per 3 sheeps</buttons>
+                <buttons id="correct">1 person per 6 sheeps</buttons>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h>
+                <input type="text">
+                <button id="free-button">Check Answer</button>
+                <p id="free-message"></p>
+            </div>
+        </div>
+    </body>
+</html>
